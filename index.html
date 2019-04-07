@@ -32,29 +32,9 @@
 
 /*
 
-INCLUDE FONTS
+DON'T FORGET 
 
-- graphik semibold
-- druk heavy
-- lyontext regular
-
-TEXT STYLES
-
-- bold thick title font - h1
-- old thick credits font - h2
-- normal white - top - p
-- normal white - center - p
-- normal white - bottom - p
-- normal white for credits - center - h4
-- red highlight - top - h3
-- red highlight - center - h3
-
-DONT FORGET 
-
-- animations - go HAM!!!
 - metadata
-- alt text
-- check for any sneaky gradients
 - analytics js
 
 */
@@ -90,7 +70,7 @@ DONT FORGET
   h1 {
   color: rgb(255, 255, 255);
   font-size: 48px;
-  font-family: Druk-Heavy;
+  font-family: Druk;
   font-weight: 900;
   text-align: right;
   text-transform: uppercase;
@@ -277,9 +257,9 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
         
-        <p animate-in="fly-in-right">Waymo spun out of Google to create a self-driving car company. Recently, it launched a commercial service in a suburb of Phoenix:</p>
+        <p animate-in="fly-in-right" animate-in-duration="1s">Waymo spun out of Google to create a self-driving car company. Recently, it launched a commercial service in a suburb of Phoenix:</p>
 
-        <h3 animate-in="fly-in-right" animate-in-delay="1s"><span class="highlight">Chandler, Arizona.</span></h3>
+        <h3 animate-in="fly-in-right" animate-in-duration="1s" animate-in-delay="1s"><span class="highlight">Chandler, Arizona.</span></h3>
 
       </amp-story-grid-layer>
     
@@ -297,7 +277,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
    
-        <p animate-in="fly-in-right">I got to ride in one of Waymo’s vehicles through the streets.</p>
+        <p animate-in="fly-in-right" animate-in-duration="1s">I got to ride in one of Waymo’s vehicles through the streets.</p>
 
       </amp-story-grid-layer>
     
@@ -315,7 +295,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="top">
         <div>
-        <h3 animate-in="fly-in-right"><span class="highlight">Here’s what it felt like.</span></h3>
+        <h3 animate-in="fade-in" animate-in-duration="1.1s"><span class="highlight">Here’s what it felt like.</span></h3>
         </div>
       </amp-story-grid-layer>
     
@@ -333,7 +313,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="card-5-7">
 
-        <p animate-in="fly-in-right">You call the car like any Uber or Lyft. It shows up and you hit a big button marked START RIDE.</p>
+        <p animate-in="fly-in-right" animate-in-duration="1s">You call the car like any Uber or Lyft. It shows up and you hit a big button marked START RIDE.</p>
 
       </amp-story-grid-layer>
     
@@ -350,7 +330,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="card-6">
 
-        <p animate-in="fly-in-right">Inside, there is a screen that shows you how the car processes the outside world. It shows the shape of the road in perfect detail, a bright little model of the minivan pursuing the line of its path through the world.</p>
+        <p animate-in="fly-in-right" animate-in-duration="1s">Inside, there is a screen that shows you how the car processes the outside world. It shows the shape of the road in perfect detail, a bright little model of the minivan pursuing the line of its path through the world.</p>
 
       </amp-story-grid-layer>
     
@@ -367,7 +347,7 @@ DONT FORGET
       
       <amp-story-grid-layer template="vertical" class="card-5-7">
 
-        <p animate-in="fade-in" animate-in-duration="1.1s">In most circumstances the car drives safely, but not aggressively. Merging is hard, but merging is hard for humans, too. </p>
+        <p animate-in="fly-in-right" animate-in-duration="1s">In most circumstances the car drives safely, but not aggressively. Merging is hard, but merging is hard for humans, too. </p>
 
       </amp-story-grid-layer>
   
@@ -403,7 +383,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="card-9">
         
-        <h3 animate-in="fly-in-right"><span class="highlight">Sometimes funny stuff happens.</span></h3>
+        <h3 animate-in="fade-in" animate-in-duration="1.1s"><span class="highlight">Sometimes funny stuff happens.</span></h3>
 
       </amp-story-grid-layer>
     
@@ -427,7 +407,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="center">
 
-        <h3 animate-in="fly-in-right"><span class="highlight">Sometimes funny stuff happens.</span></h3>
+        <h3><span class="highlight">Sometimes funny stuff happens.</span></h3>
         
         <p animate-in="fade-in" animate-in-duration="1.1s">One time, the car dropped me off and I hailed it again immediately. As I stood there on the curb, the Waymo took off, slowly, headed down the street, turned around, and pulled back up to the curb.</p>
 
@@ -447,7 +427,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="top">
         
-        <p animate-in="fly-in-right">Robot cars are not like humans. They don’t drive like us. They don’t know anything about the world other than the rules of the road.</p>
+        <p animate-in="fly-in-right" animate-in-duration="1s">Robot cars are not like humans. They don’t drive like us. They don’t know anything about the world other than the rules of the road.</p>
 
       </amp-story-grid-layer>
     
@@ -471,7 +451,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="card-12">
         
-        <p animate-in="fade-in" animate-in-duration="1.1s">The strangest thing is watching the wheel turn without a hand touching it. </p>
+        <p>The strangest thing is watching the wheel turn without a hand touching it. </p>
 
       </amp-story-grid-layer>
     
@@ -498,7 +478,7 @@ DONT FORGET
 
         <p animate-in="fade-in" animate-in-duration="1.1s">The strangest thing is watching the wheel turn without a hand touching it. </p>
         
-        <h3 animate-in="fly-in-right"><span class="highlight">It’s like a ghost is driving the car.</span></h3>
+        <h3 animate-in="fade-in" animate-in-delay="0.8s" animate-in-duration="1.3s"><span class="highlight">It’s like a ghost is driving the car.</span></h3>
 
       </amp-story-grid-layer>
     
@@ -528,7 +508,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
 
-        <p animate-in="fade-in" animate-in-duration="1.1s">There are a lot of people—inside and outside the technology industry—who are very skeptical about the prospects for self-driving cars. </p>
+        <p animate-in="fly-in-right" animate-in-duration="1s">There are a lot of people—inside and outside the technology industry—who are very skeptical about the prospects for self-driving cars. </p>
 
       </amp-story-grid-layer>
     
@@ -545,7 +525,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
         
-        <p animate-in="fly-in-right">Some are skeptical about the future of self-driving cars. Lots of people in Chandler have experienced the robot cars stuttering or behaving strangely, especially around parking lots, which are chaotic.</p>
+        <p animate-in="fade-in" animate-in-duration="1.3s">Some are skeptical about the future of self-driving cars. Lots of people in Chandler have experienced the robot cars stuttering or behaving strangely, especially around parking lots, which are chaotic.</p>
 
       </amp-story-grid-layer>
     
@@ -562,7 +542,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="top">
         
-        <p animate-in="fly-in-right">Waymo is rolling out its service very slowly, but it is rolling it out. The company has ordered tens of thousands of cars for its fleet.</p>
+        <p animate-in="fly-in-right" animate-in-duration="1s">Waymo is rolling out its service very slowly, but it is rolling it out. The company has ordered tens of thousands of cars for its fleet.</p>
 
       </amp-story-grid-layer>
     
@@ -580,7 +560,7 @@ DONT FORGET
 
       <amp-story-grid-layer template="vertical" class="top">
         
-        <h3 animate-in="fly-in-right"><span class="highlight">By the mid-2020s, who knows what the roads will look like?</span></h3>
+        <h3 animate-in="fade-in" animate-in-duration="1.3s"><span class="highlight">By the mid-2020s, who knows what the roads will look like?</span></h3>
 
       </amp-story-grid-layer>
     
