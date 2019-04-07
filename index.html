@@ -41,23 +41,188 @@ INCLUDE FONTS
 TEXT STYLES
 
 - bold thick title font - h1
-- normal white - top
-- normal white - center
-- normal white - bottom
-- red highlight - top
-- red highlight - center
-
-BG STYLES
-
-- blue gradient - title card only
-- grain
-- box?? - title card only
+- old thick credits font - h2
+- normal white - top - p
+- normal white - center - p
+- normal white - bottom - p
+- normal white for credits - center - h4
+- red highlight - top - h3
+- red highlight - center - h3
 
 DONT FORGET 
 
-- animations
+- animations - go HAM!!!
+- metadata
+- alt text
+- check for any sneaky gradients
+- analytics js
 
 */
+
+
+  
+<style amp-custom>
+  @font-face{
+      font-display:swap;
+      font-family:Druk;
+      font-style:normal;
+      font-weight:800;
+      src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.73c680315608.woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.de0a29cd8676.woff")format("woff")
+  }
+  @font-face{
+      font-display:swap;
+      font-family:"Graphik";
+      font-style:normal;
+      font-weight:400;
+      src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/graphik/Graphik-Regular-Web.f00835c4ea93.woff2")format("woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/graphik/Graphik-Regular-Web.475a966967ba.woff")format("woff")
+  }
+
+  @font-face{
+      font-display:swap;
+      font-family:"Lyon Text";
+      font-stretch:normal;
+      font-style:italic;
+      font-weight:700;
+      src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/lyon/Lyon-Text-Bold-Italic.22e4aa94ac93.woff2")format("woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/lyon/Lyon-Text-Bold-Italic.65ae5cd7ad2d.woff")format("woff")
+  }
+
+/* Cover Title */
+  h1 {
+  color: rgb(255, 255, 255);
+  font-size: 48px;
+  font-family: Druk;
+  font-weight: 500;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 47px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 60px;
+  }
+ /* Credits Header */ 
+  h2 {
+  color: rgb(249, 250, 252);
+  font-size: 50px;
+  font-family: Druk;
+  font-weight: 450;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 20px;
+  }
+/* Highlighted Body Text */
+  h3 {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  font-family: LyonText;
+  font-weight: normal;
+  line-height: 37px;
+  padding-bottom: 20px;
+  padding-left: 3px;
+  }
+  /* Credits Body Text */
+  h4 {
+  color: rgb(249, 250, 252);
+  font-size: 20px;
+  font-family: LyonText;
+  font-weight: normal;
+  letter-spacing: 0.1px;
+  line-height: 18px;
+  padding-top: 20px;
+  }
+    /* Cover Author Text */
+  h5 {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-family: Graphik;
+  font-weight: 300;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.86px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 100px;
+  }
+ /* Regular Body Text */
+  p {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: LyonText;
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 22px;
+  padding-right: 7px;
+  padding-left: 3px;
+  }
+
+
+
+  /* Red Text Highlight */
+  span.highlight {
+  background-color: #bf4911;
+  color: #ffffff; 
+  display: inline;
+  padding: 0.45rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+    /* prefixing */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+
+  /* Card Alignment */
+  amp-story-grid-layer.center {
+    align-content: center;
+  }
+
+  amp-story-grid-layer.top {
+    align-content: flex-start;
+  }
+  
+  amp-story-grid-layer.bottom {
+    align-content: end;
+    padding-bottom: 10px;
+  }
+
+  amp-story-grid-layer.gradient-2-3-15-16 {
+  background: -webkit-linear-gradient(top, rgba(54,54,54,0.6) 14%,rgba(54,54,54,0.6) 25%,rgba(54,54,54,0) 49%);
+  border-radius: 0px 0px 0px 0px;
+  align-content: flex-start;
+  }
+
+  amp-story-grid-layer.gradient-5-6-7 {
+  background: -webkit-linear-gradient(top, rgba(54,54,54,0) 51%,rgba(54,54,54,0.7) 79%,rgba(54,54,54,0.7) 90%);
+  border-radius: 0px 0px 0px 0px;
+  align-content: end;
+  padding-bottom: 10px;
+  }
+
+  amp-story-grid-layer.card-9 {
+    align-content: center;
+    padding-bottom: 59%;
+  }
+
+  amp-story-grid-layer.card-12 {
+    align-content: center;
+    padding-bottom: 40%;
+  }
+
+  amp-story-grid-layer.card-6 {
+  background: -webkit-linear-gradient(top, rgba(54,54,54,0) 51%,rgba(54,54,54,0.7) 79%,rgba(54,54,54,0.7) 90%);
+  border-radius: 0px 0px 0px 0px;
+  align-content: end;
+  padding-bottom: 30px;
+  }
+
+  amp-story-grid-layer.card-5-7 {
+  background: -webkit-linear-gradient(top, rgba(54,54,54,0) 51%,rgba(54,54,54,0.7) 79%,rgba(54,54,54,0.7) 90%);
+  border-radius: 0px 0px 0px 0px;
+  align-content: end;
+  padding-bottom: 35px;
+  }
+
 
 </style>
   
@@ -70,18 +235,31 @@ DONT FORGET
 
 
     <amp-story-page id="1">
+
+      <!-- bg fill (1a), then logo top, then cars fill animate (1b), then text-->
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/cover.png" alt="Cover" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/1a.png" alt="Background Blue Gradient" layout="responsive"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="top">
+      <amp-story-grid-layer template="top">
         
-        <amp-img src="assets/logo_white.png" alt="The Atlantic Logo" width="90px" height="30px" ></amp-img>
+        <center><amp-img src="assets/logo_white.png" alt="The Atlantic Logo" height="30px" width="92"></amp-img></center>
+      
+      </amp-story-grid-layer>
 
-        <div id="first"> <h1>THE AMAZON GOLD RUSH</h1> </div>
+      <amp-story-grid-layer template="fill">
+        
+        <amp-img animate-in="fly-in-right" animate-in-duration="3s" src="assets/1b.png" alt="Waymo Cars" layout="responsive"></amp-img>
+      
+      </amp-story-grid-layer>
+
+      <amp-story-grid-layer template="vertical" class="center">
+
+        <h1>What It’s Like to Ride in a Real Self-Driving Car</h1>
+        <h5>By Alexis C. Madrigal</h5>
 
       </amp-story-grid-layer>
     
@@ -93,13 +271,15 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/intro-cropped.gif" alt="Intro" width="200" height="200"></amp-img>
+        <amp-img src="assets/219.jpg" alt="Chandler, Arizona Scene" width="200" height="200"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="gradient-top-intro">
+      <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
         
-        <p animate-in="fly-in-right">Struggling to pay rent in New York City and stuck at jobs they disliked, Jordan McDowell and William Bjork wanted a way out.</p>
+        <p animate-in="fly-in-right">Waymo spun out of Google to create a self-driving car company. Recently, it launched a commercial service in a suburb of Phoenix:</p>
+
+        <h3 animate-in="fly-in-right" animate-in-delay="1s"><span class="highlight">Chandler, Arizona.</span></h3>
 
       </amp-story-grid-layer>
     
@@ -111,13 +291,13 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/bros.png" alt="Bros" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/3.jpg" alt="Alexis Madrigal getting into a Waymo car" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="gradient-top-coaches">
+      <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
    
-        <p animate-in="fly-in-right">They found a podcast featuring Matt Behdjou and Mike Gazzola, normal guys who promised they could teach anyone to make thousands of dollars selling goods on Amazon.</p>
+        <p animate-in="fly-in-right">I got to ride in one of Waymo’s vehicles through the streets.</p>
 
       </amp-story-grid-layer>
     
@@ -129,13 +309,13 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="https://cdn.theatlantic.com/assets/media/files/pitch_new.jpg" alt="Pitch" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/4.jpg" alt="Alexis Madrigal smiling in front of a Waymo car" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical">
+      <amp-story-grid-layer template="vertical" class="top">
         <div>
-        <p animate-in="fly-in-right">The pair would explain everything: how to source and ship a product from China, how to list it for an attractive markup on Amazon, and how to get customers to leave good reviews.</p>
+        <h3 animate-in="fly-in-right"><span class="highlight">Here’s what it felt like.</span></h3>
         </div>
       </amp-story-grid-layer>
     
@@ -147,15 +327,13 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/bait-cropped.gif" alt="Bait" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/5.jpg" alt="Waymo logo on the car" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="text-color-black">
+      <amp-story-grid-layer template="vertical" class="card-5-7">
 
-        <p animate-in="fly-in-right">All McDowell and Bjork had to do was pay $3,999 for an online course.</p>
-
-        <h3 animate-in="fly-in-right" animate-in-delay="1s"><span class="highlight">Instead, they say they spent $40,000.</span></h3>
+        <p animate-in="fly-in-right">You call the car like any Uber or Lyft. It shows up and you hit a big button marked START RIDE.</p>
 
       </amp-story-grid-layer>
     
@@ -166,13 +344,13 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/escape.png" alt="Escape" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/6.jpg" alt="Screen inside car" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="gradient-top-escape">
+      <amp-story-grid-layer template="vertical" class="card-6">
 
-        <p animate-in="fly-in-right">This included the class, inventory, and shipping and storage costs.</p>
+        <p animate-in="fly-in-right">Inside, there is a screen that shows you how the car processes the outside world. It shows the shape of the road in perfect detail, a bright little model of the minivan pursuing the line of its path through the world.</p>
 
       </amp-story-grid-layer>
     
@@ -183,22 +361,13 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/escape.png" alt="Escape" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/7.jpg" alt="Looking through car windshield" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
       
-      <amp-story-grid-layer template="fill">
-        
-        <amp-img src="assets/grain.png" alt="Anything" layout="responsive" width="100" height="100"></amp-img>
-      
-      </amp-story-grid-layer>
-      
-      <amp-story-grid-layer template="vertical" class="center">
+      <amp-story-grid-layer template="vertical" class="card-5-7">
 
-        <p animate-in="fade-in" animate-in-duration="1.1s">They’re convinced they were led astray by Behdjou and Gazzola.</p>
-        <p animate-in="fade-in" animate-in-duration="1.1s">Behdjou and Gazzola deny misleading their students, and say losing that much money while following their methods would be very difficult.</p>        
-        <p animate-in="fade-in" animate-in-duration="1.1s">Many of their students have succeeded in selling things online, even though it’s a tough business, they say.</p>
-        <p animate-in="fade-in" animate-in-duration="1.1s">“There’s no such thing as get rich quick,” Gazzola says. “But it would be hard for you to fail if you literally worked your butt off.” </p>
+        <p animate-in="fade-in" animate-in-duration="1.1s">In most circumstances the car drives safely, but not aggressively. Merging is hard, but merging is hard for humans, too. </p>
 
       </amp-story-grid-layer>
   
@@ -210,17 +379,8 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/amazon.png" alt="Amazon" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/8910.jpg" alt="Alexis Madrigal exiting a Waymo car" layout="responsive" width="100" height="100"></amp-img>
       
-      </amp-story-grid-layer>
-
-
-      <amp-story-grid-layer template="vertical" class="text-color-black">
-
-        <h3 animate-in="fly-in-right"><span class="highlight">Amazon is now the world’s shopping site.</span></h3>
-
-        <p animate-in="fly-in-right">But more than half of what it sells comes from third parties, not Amazon itself.</p>
-
       </amp-story-grid-layer>
     
     </amp-story-page>
@@ -231,15 +391,19 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/anything.png" alt="Anything" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/8910.jpg" alt="Alexis Madrigal exiting a Waymo car" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical">
+      <amp-story-grid-layer template="fill">
         
-        <div class="text-color-black">
-        <p animate-in="fly-in-right" style="width: 50%">For a fee, Amazon will let individuals sell pretty much anything.</p>
-    	</div>
+        <amp-img src="assets/grain.png" alt="Grain" layout="responsive" width="100" height="100"></amp-img>
+      
+      </amp-story-grid-layer>
+
+      <amp-story-grid-layer template="vertical" class="card-9">
+        
+        <h3 animate-in="fly-in-right"><span class="highlight">Sometimes funny stuff happens.</span></h3>
 
       </amp-story-grid-layer>
     
@@ -251,19 +415,21 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/anything.png" alt="Anything" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/8910.jpg" alt="Alexis Madrigal exiting a Waymo car" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/grain.png" alt="Anything" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/grain.png" alt="Grain" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="vertical" class="center">
+
+        <h3 animate-in="fly-in-right"><span class="highlight">Sometimes funny stuff happens.</span></h3>
         
-        <p animate-in="fade-in" animate-in-duration="1.1s">The company will handle the shipping and storage—and overseas manufacturers are happy to supply cheap goods, if paid in advance.</p>
+        <p animate-in="fade-in" animate-in-duration="1.1s">One time, the car dropped me off and I hailed it again immediately. As I stood there on the curb, the Waymo took off, slowly, headed down the street, turned around, and pulled back up to the curb.</p>
 
       </amp-story-grid-layer>
     
@@ -275,13 +441,13 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/gold-cropped.gif" alt="Gold" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/11.jpg" alt="Shadows falling on Waymo cars" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical">
+      <amp-story-grid-layer template="vertical" class="top">
         
-        <p animate-in="fly-in-right">Some sellers have struck gold selling products such as phone cases and travel pillows using these methods.</p>
+        <p animate-in="fly-in-right">Robot cars are not like humans. They don’t drive like us. They don’t know anything about the world other than the rules of the road.</p>
 
       </amp-story-grid-layer>
     
@@ -293,20 +459,19 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/bills.png" alt="Bills" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/121314.gif" alt="Car wheel turning by itself video" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/grain.png" alt="Anything" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/grain.png" alt="Grain" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="center">
+      <amp-story-grid-layer template="vertical" class="card-12">
         
-        <p animate-in="fade-in" animate-in-duration="1.1s">Many have not, and they are stuck with mounting bills and cheap products they can’t sell.</p>
-        <p animate-in="fade-in" animate-in-duration="1.1s">The real winners are the e-commerce “experts” who offer advice on how to game Amazon and charge thousands of dollars for their courses.</p>
+        <p animate-in="fade-in" animate-in-duration="1.1s">The strangest thing is watching the wheel turn without a hand touching it. </p>
 
       </amp-story-grid-layer>
     
@@ -318,13 +483,22 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/complaint-cropped.gif" alt="Complaint" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/121314.gif" alt="Car wheel turning by itself video" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="gradient-top-complaint">
+      <amp-story-grid-layer template="fill">
         
-        <p animate-in="fly-in-right">In 2018, nearly 50 people filed complaints with the Federal Trade Commission, saying these experts lied to them about how much money they could make selling on Amazon.</p>
+        <amp-img src="assets/grain.png" alt="Grain" layout="responsive" width="100" height="100"></amp-img>
+      
+      </amp-story-grid-layer>
+
+      <amp-story-grid-layer template="vertical" class="center">
+
+
+        <p animate-in="fade-in" animate-in-duration="1.1s">The strangest thing is watching the wheel turn without a hand touching it. </p>
+        
+        <h3 animate-in="fly-in-right"><span class="highlight">It’s like a ghost is driving the car.</span></h3>
 
       </amp-story-grid-layer>
     
@@ -335,14 +509,8 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/astray-cropped.gif" alt="Complaint" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/121314.gif" alt="Car wheel turning by itself video" layout="responsive" width="100" height="100"></amp-img>
       
-      </amp-story-grid-layer>
-
-      <amp-story-grid-layer template="vertical" class="text-color-black">
-        
-      <h3 animate-in="fly-in-right"><span class="highlight">Half of the victims lost more than $35,000.</span></h3>
-
       </amp-story-grid-layer>
     
     </amp-story-page>
@@ -354,20 +522,13 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/astray.png" alt="Complaint" layout="responsive" width="100" height="100"></amp-img>
-      
-      </amp-story-grid-layer>
-      
-      <amp-story-grid-layer template="fill">
-        
-        <amp-img src="assets/grain.png" alt="Anything" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/15.jpg" alt="Three Waymo cars lined up" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="center">
-        <p animate-in="fade-in" animate-in-duration="1.1s">An Amazon spokesperson said the company worked closely with the FTC on two cases the agency filed this year against individuals behind Amazon-focused “business opportunity schemes.”</p>
-        <p animate-in="fade-in" animate-in-duration="1.1s" animate-in-delay=".5s">Entrepreneurs and small businesses are important to Amazon, the spokesperson said, “and we aggressively pursue those that attempt to harm their selling experience.”</p>
-        <p animate-in="fade-in" animate-in-duration="1.1s" animate-in-delay=".75s">No FTC complaints have been filed against Behdjou and Gazzola, and Amazon declined to comment on the two.</p>
+      <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
+
+        <p animate-in="fade-in" animate-in-duration="1.1s">There are a lot of people—inside and outside the technology industry—who are very skeptical about the prospects for self-driving cars. </p>
 
       </amp-story-grid-layer>
     
@@ -378,13 +539,13 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/america_credits.png" alt="America" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/16.gif" alt="Sped up video of paking lot" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="text-color-black">
+      <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
         
-        <p animate-in="fly-in-right">The coaches have no shortage of customers. After all, there’s something uniquely American about believing that, with a little bit of hard work, anybody can make money fast.</p>
+        <p animate-in="fly-in-right">Some are skeptical about the future of self-driving cars. Lots of people in Chandler have experienced the robot cars stuttering or behaving strangely, especially around parking lots, which are chaotic.</p>
 
       </amp-story-grid-layer>
     
@@ -395,13 +556,13 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/america_credits.png" alt="America" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/17.jpg" alt="Single Waymo car" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="text-color-black">
+      <amp-story-grid-layer template="vertical" class="top">
         
-        <p animate-in="fly-in-right">The coaches have no shortage of customers. After all, there’s something uniquely American about believing that, with a little bit of hard work, anybody can make money fast.</p>
+        <p animate-in="fly-in-right">Waymo is rolling out its service very slowly, but it is rolling it out. The company has ordered tens of thousands of cars for its fleet.</p>
 
       </amp-story-grid-layer>
     
@@ -413,13 +574,13 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/america_credits.png" alt="America" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/18.jpg" alt="Waymo car wheel" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="text-color-black">
+      <amp-story-grid-layer template="vertical" class="top">
         
-        <p animate-in="fly-in-right">The coaches have no shortage of customers. After all, there’s something uniquely American about believing that, with a little bit of hard work, anybody can make money fast.</p>
+        <h3 animate-in="fly-in-right"><span class="highlight">By the mid-2020s, who knows what the roads will look like?</span></h3>
 
       </amp-story-grid-layer>
     
@@ -430,13 +591,13 @@ DONT FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/america_credits.png" alt="Credits" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/219.jpg" alt="Chandler, Arizona Scene" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/grain.png" alt="Anything" layout="responsive" width="100" height="100"></amp-img>
+        <amp-img src="assets/grain.png" alt="Grain" layout="responsive" width="100" height="100"></amp-img>
       
       </amp-story-grid-layer>
 
@@ -444,7 +605,7 @@ DONT FORGET
 
       	<h2>CREDITS</h2>
         
-        <p>Writer: Alexis C. Madrigal <br /><br /> Photographer: Caitlin O’Hara <br /><br /> Project Manager: Andrew McGill <br /><br /> Art Director: Emily Jan <br /><br /> Designer: Angela Y. He <br /><br /> Developer: Shaleila Louis <br /><br /> Editor: Ellen Cushing <br /><br /> Engagement Editor: Julie Bogen </p>
+        <h4>Writer: Alexis C. Madrigal <br /><br /> Photographer: Caitlin O’Hara <br /><br /> Project Manager: Andrew McGill <br /><br /> Art Director: Emily Jan <br /><br /> Designer: Angela Y. He <br /><br /> Developer: Shaleila Louis <br /><br /> Editor: Ellen Cushing <br /><br /> Engagement Editor: Julie Bogen </h4>
 
       </amp-story-grid-layer>
     
