@@ -42,19 +42,29 @@ DON'T FORGET
 
   
 <style amp-custom>
+
   @font-face{
-      font-display:swap;
-      font-family:Druk;
-      font-style:normal;
-      font-weight:800;
-      src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.73c680315608.woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.de0a29cd8676.woff")format("woff")
+    font-display:swap;
+    font-family:"Graphik";
+    font-style:normal;
+    font-weight:400;
+    src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/graphik/Graphik-Regular-Web.f00835c4ea93.woff2")format("woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/graphik/Graphik-Regular-Web.475a966967ba.woff")format("woff")
   }
+
   @font-face{
       font-display:swap;
       font-family:"Graphik";
       font-style:normal;
       font-weight:400;
       src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/graphik/Graphik-Regular-Web.f00835c4ea93.woff2")format("woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/graphik/Graphik-Regular-Web.475a966967ba.woff")format("woff")
+  }
+
+  @font-face{
+      font-display:swap;
+      font-family:Druk;
+      font-style:normal;
+      font-weight:800;
+      src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.73c680315608.woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.de0a29cd8676.woff")format("woff")
   }
 
   @font-face{
@@ -70,8 +80,7 @@ DON'T FORGET
   h1 {
   color: rgb(255, 255, 255);
   font-size: 48px;
-  font-family: Druk, sans-serif;
-  font-weight: 900;
+  font-family: Druk;
   text-align: right;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -87,6 +96,11 @@ DON'T FORGET
   .white-box {
     border: 1px solid white;
     padding: 22px 18px;
+    min-height: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
   }
   
  /* Credits Header */ 
@@ -144,7 +158,7 @@ DON'T FORGET
   p {
   color: rgb(255, 255, 255);
   font-size: 18px;
-  font-family: "Lyon Text";
+  font-family: "Lyon Text", serif;
   font-weight: normal;
   letter-spacing: 0px;
   line-height: 22px;
@@ -278,7 +292,7 @@ DON'T FORGET
         
         <p animate-in="fly-in-right" animate-in-duration=".5s">Waymo spun out of Google to create a self-driving car company. Recently, it launched a commercial service in a suburb of Phoenix:</p>
 
-        <h3 animate-in="fly-in-right" animate-in-duration=".5s" animate-in-delay=".5s"><span class="highlight">Chandler, Arizona.</span></h3>
+        <h3 animate-in="fly-in-right" animate-in-duration=".5s" animate-in-delay="1s"><span class="highlight">Chandler, Arizona.</span></h3>
 
       </amp-story-grid-layer>
     
@@ -330,7 +344,7 @@ DON'T FORGET
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="card-5-7">
+      <amp-story-grid-layer template="vertical" class="card-5">
 
         <p animate-in="fly-in-right" animate-in-duration=".5s">You call the car like any Uber or Lyft. It shows up and you hit a big button marked START RIDE.</p>
 
@@ -400,14 +414,15 @@ DON'T FORGET
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="card-9">
-        
-        <h3 animate-in="fade-in" animate-in-duration=".51s"><span class="highlight">Sometimes funny stuff happens.</span></h3>
+      <amp-story-grid-layer template="thirds" class="card-9">
 
+        <div grid-area="middle-third">        
+          <h3 animate-in="fade-in" animate-in-duration=".51s"><span class="highlight">Sometimes funny stuff happens.</span></h3>
+        </div>
+        
       </amp-story-grid-layer>
     
     </amp-story-page>
-
 
 
     <amp-story-page id="10">
@@ -424,16 +439,16 @@ DON'T FORGET
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="center">
-
-        <h3><span class="highlight">Sometimes funny stuff happens.</span></h3>
+      <amp-story-grid-layer template="thirds" class="card-9">
         
-        <p animate-in="fade-in" animate-in-duration=".51s">One time, the car dropped me off and I hailed it again immediately. As I stood there on the curb, the Waymo took off, slowly, headed down the street, turned around, and pulled back up to the curb.</p>
-
+        <div grid-area="middle-third">
+          <h3><span class="highlight">Sometimes funny stuff happens.</span></h3>
+          <p animate-in="fade-in" animate-in-duration=".51s">One time, the car dropped me off and I hailed it again immediately. As I stood there on the curb, the Waymo took off, slowly, headed down the street, turned around, and pulled back up to the curb.</p>
+        </div>
+        
       </amp-story-grid-layer>
     
     </amp-story-page>
-
 
 
     <amp-story-page id="11">
