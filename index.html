@@ -70,16 +70,24 @@ DON'T FORGET
   h1 {
   color: rgb(255, 255, 255);
   font-size: 48px;
-  font-family: Druk;
+  font-family: Druk, sans-serif;
   font-weight: 900;
   text-align: right;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 47px;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 60px;
+  margin-bottom: 8px;
   }
+  
+  .logo {
+    text-align: center; 
+  }
+  
+  .white-box {
+    border: 1px solid white;
+    padding: 22px 18px;
+  }
+  
  /* Credits Header */ 
   h2 {
   color: rgb(249, 250, 252);
@@ -119,9 +127,6 @@ DON'T FORGET
   text-align: right;
   text-transform: uppercase;
   letter-spacing: 0.86px;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 100px;
   }
  /* Regular Body Text */
   p {
@@ -224,23 +229,24 @@ DON'T FORGET
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="top">
-        
-        <center><amp-img src="assets/logo_white.png" alt="The Atlantic Logo" height="30px" width="92"></amp-img></center>
-      
-      </amp-story-grid-layer>
-
       <amp-story-grid-layer template="fill">
         
         <amp-img animate-in="fly-in-right" animate-in-duration="3s" src="assets/1b.png" alt="Waymo Cars" layout="responsive"></amp-img>
       
       </amp-story-grid-layer>
 
+
+      <amp-story-grid-layer template="vertical" class="top">
+        <div class="logo">
+          <amp-img src="assets/logo_white.png" alt="The Atlantic Logo" height="30px" width="92"></amp-img>
+        </div>
+      </amp-story-grid-layer>
+            
       <amp-story-grid-layer template="vertical" class="center">
-
-        <h1>What It’s Like to Ride in a Real Self-Driving Car</h1>
-        <h5>By Alexis C. Madrigal</h5>
-
+        <div class="white-box">
+          <h1>What It’s Like to Ride in a Real Self-Driving Car</h1>
+          <h5>By Alexis C. Madrigal</h5>
+        </div>
       </amp-story-grid-layer>
     
     </amp-story-page>
