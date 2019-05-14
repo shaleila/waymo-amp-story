@@ -1,0 +1,33 @@
+{
+  "share-providers": {
+    "email": true,
+    "twitter": true,
+    "facebook": {
+      "app_id": "587023288346596"
+    }
+  },
+  "related-articles": {
+    "More to Read": [
+      {
+        "title": "The Geography of Oppression",
+        "url": "https://www.theatlantic.com/magazine/archive/2018/02/latoya-ruby-frazier-geography-of-oppression/552587/",
+        "image": "./assets/THUMBNAIL_HERE.png"
+      },
+      {
+        "title": "The Amazon Gold Rush",
+        "url": "https://www.theatlantic.com/assets/media/interactives/2019/01/02/the-amazon-gold-rush-atlantic-amp-story/",
+        "image": "./assets/THUMBNAIL_HERE"
+      },
+      {
+        "title": "Driverless Cars Could Make Transportation Free for Everyone—With a Catch",
+        "url": "https://www.theatlantic.com/technology/archive/2017/12/self-driving-cars-free-future/548945/",
+        "image": "./assets/THUMBNAIL_HERE"
+      },
+      {
+        "title": "7 Arguments Against the Autonomous-Vehicle Utopia",
+        "url": "https://www.theatlantic.com/technology/archive/2018/12/7-arguments-against-the-autonomous-vehicle-utopia/578638/",
+        "image": "./assets/THUMBNAIL_HERE"
+      }
+    ]
+  }
+}
