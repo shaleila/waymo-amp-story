@@ -42,13 +42,15 @@ DON'T FORGET
 
   
 <style amp-custom>
+
   @font-face{
-      font-display:swap;
-      font-family:Druk;
-      font-style:normal;
-      font-weight:800;
-      src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.73c680315608.woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.de0a29cd8676.woff")format("woff")
+    font-display:swap;
+    font-family:"Graphik";
+    font-style:normal;
+    font-weight:400;
+    src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/graphik/Graphik-Regular-Web.f00835c4ea93.woff2")format("woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/graphik/Graphik-Regular-Web.475a966967ba.woff")format("woff")
   }
+
   @font-face{
       font-display:swap;
       font-family:"Graphik";
@@ -59,11 +61,19 @@ DON'T FORGET
 
   @font-face{
       font-display:swap;
+      font-family:Druk;
+      font-style:normal;
+      font-weight:800;
+      src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.73c680315608.woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/druk/Druk-Heavy-Web.de0a29cd8676.woff")format("woff")
+  }
+
+  @font-face{
+      font-display:swap;
       font-family:"Lyon Text";
       font-stretch:normal;
-      font-style:italic;
-      font-weight:700;
-      src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/lyon/Lyon-Text-Bold-Italic.22e4aa94ac93.woff2")format("woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/lyon/Lyon-Text-Bold-Italic.65ae5cd7ad2d.woff")format("woff")
+      font-style:normal;
+      font-weight:400;
+      src:url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/lyon/Lyon-Text-Regular.952052f78892.woff2")format("woff2"),url("https://cdn.theatlantic.com/assets/static/b/frontend/dist/theatlantic/fonts/lyon/Lyon-Text-Regular.840c78933255.woff")format("woff")
   }
 
 /* Cover Title */
@@ -71,15 +81,28 @@ DON'T FORGET
   color: rgb(255, 255, 255);
   font-size: 48px;
   font-family: Druk;
-  font-weight: 900;
   text-align: right;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 47px;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 60px;
+  margin-bottom: 8px;
+  font-style: normal;
   }
+  
+  .logo {
+    text-align: center; 
+  }
+  
+  .white-box {
+    border: 1px solid white;
+    padding: 22px 18px;
+    min-height: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
  /* Credits Header */ 
   h2 {
   color: rgb(249, 250, 252);
@@ -94,22 +117,33 @@ DON'T FORGET
   h3 {
   color: rgb(255, 255, 255);
   font-size: 22px;
-  font-family: LyonText;
+  font-family: "Lyon Text";
   font-weight: normal;
   line-height: 37px;
   padding-bottom: 20px;
   padding-left: 3px;
   }
   /* Credits Body Text */
-  h4 {
-  color: rgb(249, 250, 252);
-  font-size: 20px;
-  font-family: LyonText;
-  font-weight: normal;
-  letter-spacing: 0.1px;
-  line-height: 18px;
-  padding-top: 20px;
+  ul.credits {
+    list-style: none;
+    padding: 0;
+    color: rgb(249, 250, 252);
+    font-size: 18px;
+    font-family: "Lyon Text";
+    font-weight: normal;
+    letter-spacing: 0.1px;
+    line-height: 22px;
+    padding-top: 20px;
   }
+  
+  ul.credits li {
+    margin-bottom: 12px;
+  }
+  
+  ul.credits li:last-child {
+    margin-bottom: 0px;
+  }
+  
     /* Cover Author Text */
   h5 {
   color: rgb(255, 255, 255);
@@ -119,15 +153,12 @@ DON'T FORGET
   text-align: right;
   text-transform: uppercase;
   letter-spacing: 0.86px;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 100px;
   }
  /* Regular Body Text */
   p {
   color: rgb(255, 255, 255);
   font-size: 18px;
-  font-family: LyonText;
+  font-family: "Lyon Text", serif;
   font-weight: normal;
   letter-spacing: 0px;
   line-height: 22px;
@@ -189,14 +220,15 @@ DON'T FORGET
     padding-bottom: 40%;
   }
 
-  amp-story-grid-layer.card-6 {
-  background: -webkit-linear-gradient(top, rgba(54,54,54,0) 51%,rgba(54,54,54,0.7) 79%,rgba(54,54,54,0.7) 90%);
+  amp-story-grid-layer.card-6-7 {
+  background: linear-gradient(90deg, rgba(8, 9, 11, 0.81) 0%, rgba(8, 9, 11, 0.81) 30%, rgba(15, 17, 19, 0) 50%);
+  background: -webkit-linear-gradient(90deg, rgba(8, 9, 11, 0.81) 0%, rgba(8, 9, 11, 0.81) 30%, rgba(15, 17, 19, 0) 50%);
   border-radius: 0px 0px 0px 0px;
   align-content: end;
   padding-bottom: 30px;
   }
 
-  amp-story-grid-layer.card-5-7 {
+  amp-story-grid-layer.card-5 {
   background: -webkit-linear-gradient(top, rgba(54,54,54,0) 51%,rgba(54,54,54,0.7) 79%,rgba(54,54,54,0.7) 90%);
   border-radius: 0px 0px 0px 0px;
   align-content: end;
@@ -220,27 +252,28 @@ DON'T FORGET
      
       <amp-story-grid-layer template="fill">
         
-        <amp-img src="assets/1a.png" alt="Background Blue Gradient" layout="responsive"></amp-img>
-      
-      </amp-story-grid-layer>
-
-      <amp-story-grid-layer template="top">
-        
-        <center><amp-img src="assets/logo_white.png" alt="The Atlantic Logo" height="30px" width="92"></amp-img></center>
+        <amp-img src="assets/1a.png" alt="Background Blue Gradient" layout="responsive" width="720" height="1250"></amp-img>
       
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
         
-        <amp-img animate-in="fly-in-right" animate-in-duration="3s" src="assets/1b.png" alt="Waymo Cars" layout="responsive"></amp-img>
+        <amp-img animate-in="fly-in-right" animate-in-duration="3s" src="assets/1b.png" alt="Waymo Cars" layout="responsive" width="916" height="183"></amp-img>
       
       </amp-story-grid-layer>
 
+
+      <amp-story-grid-layer template="vertical" class="top">
+        <div class="logo">
+          <amp-img src="assets/logo_white.png" alt="The Atlantic Logo" height="30px" width="92"></amp-img>
+        </div>
+      </amp-story-grid-layer>
+            
       <amp-story-grid-layer template="vertical" class="center">
-
-        <h1>What It’s Like to Ride in a Real Self-Driving Car</h1>
-        <h5>By Alexis C. Madrigal</h5>
-
+        <div class="white-box">
+          <h1>What It’s Like to Ride in a Real Self-Driving Car</h1>
+          <h5>By Alexis C. Madrigal</h5>
+        </div>
       </amp-story-grid-layer>
     
     </amp-story-page>
@@ -257,9 +290,9 @@ DON'T FORGET
 
       <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
         
-        <p animate-in="fly-in-right" animate-in-duration="1s">Waymo spun out of Google to create a self-driving car company. Recently, it launched a commercial service in a suburb of Phoenix:</p>
+        <p animate-in="fly-in-right" animate-in-duration=".5s">Waymo spun out of Google to create a self-driving car company. Recently, it launched a commercial service in a suburb of Phoenix:</p>
 
-        <h3 animate-in="fly-in-right" animate-in-duration="1s" animate-in-delay="1s"><span class="highlight">Chandler, Arizona.</span></h3>
+        <h3 animate-in="fly-in-right" animate-in-duration=".5s" animate-in-delay="1s"><span class="highlight">Chandler, Arizona.</span></h3>
 
       </amp-story-grid-layer>
     
@@ -277,7 +310,7 @@ DON'T FORGET
 
       <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
    
-        <p animate-in="fly-in-right" animate-in-duration="1s">I got to ride in one of Waymo’s vehicles through the streets.</p>
+        <p animate-in="fly-in-right" animate-in-duration=".5s">I got to ride in one of Waymo’s vehicles through the streets.</p>
 
       </amp-story-grid-layer>
     
@@ -295,7 +328,7 @@ DON'T FORGET
 
       <amp-story-grid-layer template="vertical" class="top">
         <div>
-        <h3 animate-in="fade-in" animate-in-duration="1.1s"><span class="highlight">Here’s what it felt like.</span></h3>
+        <h3 animate-in="fade-in" animate-in-duration=".51s"><span class="highlight">Here’s what it felt like.</span></h3>
         </div>
       </amp-story-grid-layer>
     
@@ -311,9 +344,9 @@ DON'T FORGET
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="card-5-7">
+      <amp-story-grid-layer template="vertical" class="card-5">
 
-        <p animate-in="fly-in-right" animate-in-duration="1s">You call the car like any Uber or Lyft. It shows up and you hit a big button marked START RIDE.</p>
+        <p animate-in="fly-in-right" animate-in-duration=".5s">You call the car like any Uber or Lyft. It shows up and you hit a big button marked START RIDE.</p>
 
       </amp-story-grid-layer>
     
@@ -328,9 +361,9 @@ DON'T FORGET
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="card-6">
+      <amp-story-grid-layer template="vertical" class="card-6-7">
 
-        <p animate-in="fly-in-right" animate-in-duration="1s">Inside, there is a screen that shows you how the car processes the outside world. It shows the shape of the road in perfect detail, a bright little model of the minivan pursuing the line of its path through the world.</p>
+        <p animate-in="fly-in-right" animate-in-duration=".5s">Inside, there is a screen that shows you how the car processes the outside world. It shows the shape of the road in perfect detail, a bright little model of the minivan pursuing the line of its path through the world.</p>
 
       </amp-story-grid-layer>
     
@@ -345,9 +378,9 @@ DON'T FORGET
       
       </amp-story-grid-layer>
       
-      <amp-story-grid-layer template="vertical" class="card-5-7">
+      <amp-story-grid-layer template="vertical" class="card-6-7">
 
-        <p animate-in="fly-in-right" animate-in-duration="1s">In most circumstances the car drives safely, but not aggressively. Merging is hard, but merging is hard for humans, too. </p>
+        <p animate-in="fly-in-right" animate-in-duration=".5s">In most circumstances the car drives safely, but not aggressively. Merging is hard, but merging is hard for humans, too. </p>
 
       </amp-story-grid-layer>
   
@@ -381,14 +414,15 @@ DON'T FORGET
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="card-9">
-        
-        <h3 animate-in="fade-in" animate-in-duration="1.1s"><span class="highlight">Sometimes funny stuff happens.</span></h3>
+      <amp-story-grid-layer template="thirds" class="card-9">
 
+        <div grid-area="middle-third">        
+          <h3 animate-in="fade-in" animate-in-duration=".51s"><span class="highlight">Sometimes funny stuff happens.</span></h3>
+        </div>
+        
       </amp-story-grid-layer>
     
     </amp-story-page>
-
 
 
     <amp-story-page id="10">
@@ -405,16 +439,16 @@ DON'T FORGET
       
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="vertical" class="center">
-
-        <h3><span class="highlight">Sometimes funny stuff happens.</span></h3>
+      <amp-story-grid-layer template="thirds" class="card-9">
         
-        <p animate-in="fade-in" animate-in-duration="1.1s">One time, the car dropped me off and I hailed it again immediately. As I stood there on the curb, the Waymo took off, slowly, headed down the street, turned around, and pulled back up to the curb.</p>
-
+        <div grid-area="middle-third">
+          <h3><span class="highlight">Sometimes funny stuff happens.</span></h3>
+          <p animate-in="fade-in" animate-in-duration=".51s">One time, the car dropped me off and I hailed it again immediately. As I stood there on the curb, the Waymo took off, slowly, headed down the street, turned around, and pulled back up to the curb.</p>
+        </div>
+        
       </amp-story-grid-layer>
     
     </amp-story-page>
-
 
 
     <amp-story-page id="11">
@@ -427,7 +461,7 @@ DON'T FORGET
 
       <amp-story-grid-layer template="vertical" class="top">
         
-        <p animate-in="fly-in-right" animate-in-duration="1s">Robot cars are not like humans. They don’t drive like us. They don’t know anything about the world other than the rules of the road.</p>
+        <p animate-in="fly-in-right" animate-in-duration=".5s">Robot cars are not like humans. They don’t drive like us. They don’t know anything about the world other than the rules of the road.</p>
 
       </amp-story-grid-layer>
     
@@ -476,9 +510,9 @@ DON'T FORGET
       <amp-story-grid-layer template="vertical" class="center">
 
 
-        <p animate-in="fade-in" animate-in-duration="1.1s">The strangest thing is watching the wheel turn without a hand touching it. </p>
+        <p animate-in="fade-in" animate-in-duration=".5s">The strangest thing is watching the wheel turn without a hand touching it. </p>
         
-        <h3 animate-in="fade-in" animate-in-delay="0.8s" animate-in-duration="1.3s"><span class="highlight">It’s like a ghost is driving the car.</span></h3>
+        <h3 animate-in="fade-in" animate-in-delay="1s" animate-in-duration=".5s"><span class="highlight">It’s like a ghost is driving the car.</span></h3>
 
       </amp-story-grid-layer>
     
@@ -508,7 +542,7 @@ DON'T FORGET
 
       <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
 
-        <p animate-in="fly-in-right" animate-in-duration="1s">There are a lot of people—inside and outside the technology industry—who are very skeptical about the prospects for self-driving cars. </p>
+        <p animate-in="fly-in-right" animate-in-duration=".5s">There are a lot of people—inside and outside the technology industry—who are very skeptical about the prospects for self-driving cars. </p>
 
       </amp-story-grid-layer>
     
@@ -525,7 +559,7 @@ DON'T FORGET
 
       <amp-story-grid-layer template="vertical" class="gradient-2-3-15-16">
         
-        <p animate-in="fade-in" animate-in-duration="1.3s">Some are skeptical about the future of self-driving cars. Lots of people in Chandler have experienced the robot cars stuttering or behaving strangely, especially around parking lots, which are chaotic.</p>
+        <p animate-in="fade-in" animate-in-duration=".53s">Some are skeptical about the future of self-driving cars. Lots of people in Chandler have experienced the robot cars stuttering or behaving strangely, especially around parking lots, which are chaotic.</p>
 
       </amp-story-grid-layer>
     
@@ -542,7 +576,7 @@ DON'T FORGET
 
       <amp-story-grid-layer template="vertical" class="top">
         
-        <p animate-in="fly-in-right" animate-in-duration="1s">Waymo is rolling out its service very slowly, but it is rolling it out. The company has ordered tens of thousands of cars for its fleet.</p>
+        <p animate-in="fly-in-right" animate-in-duration=".5s">Waymo is rolling out its service very slowly, but it is rolling it out. The company has ordered tens of thousands of cars for its fleet.</p>
 
       </amp-story-grid-layer>
     
@@ -560,7 +594,7 @@ DON'T FORGET
 
       <amp-story-grid-layer template="vertical" class="top">
         
-        <h3 animate-in="fade-in" animate-in-duration="1.3s"><span class="highlight">By the mid-2020s, who knows what the roads will look like?</span></h3>
+        <h3 animate-in="fade-in" animate-in-duration=".53s"><span class="highlight">By the mid-2020s, who knows what the roads will look like?</span></h3>
 
       </amp-story-grid-layer>
     
@@ -585,7 +619,16 @@ DON'T FORGET
 
       	<h2>CREDITS</h2>
         
-        <h4>Writer: Alexis C. Madrigal <br /><br /> Photographer: Caitlin O’Hara <br /><br /> Project Manager: Andrew McGill <br /><br /> Art Director: Emily Jan <br /><br /> Designer: Angela Y. He <br /><br /> Developer: Shaleila Louis <br /><br /> Editor: Ellen Cushing <br /><br /> Engagement Editor: Julie Bogen </h4>
+        <ul class="credits">
+          <li>Writer: Alexis C. Madrigal</li>
+          <li>Photographer: Caitlin O’Hara</li>
+          <li>Project Manager: Andrew McGill</li>
+          <li>Art Director: Emily Jan</li>
+          <li>Designer: Angela Y. He</li>
+          <li>Developer: Shaleila Louis</li>
+          <li>Editor: Ellen Cushing</li>
+          <li>Engagement Editor: Julie Bogen</li>
+        </ul>
 
       </amp-story-grid-layer>
     
